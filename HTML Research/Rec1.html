@@ -96,5 +96,96 @@
         }
     </code>
 </pre>
+
+<pre>
+    <code>
+        const express = require('express');
+const app = express();
+
+// middleware 1
+app.use((req, res, next) => {
+  console.log("Step 1");
+  next();
+});
+
+// middleware 2
+app.use((req, res, next) => {
+  console.log("Step 2");
+  next();
+});
+
+// final response
+app.get('/', (req, res) => {
+  res.send("Pipeline Complete");
+});
+
+app.listen(3000);
+    </code>
+</pre>
+
+<!-- Showing the time here -->
+ <p>Current Time <time datetime="9:30">9:30 AM</time></p>
+
+ <!-- Using abbriviation -->
+  <p><abbr>Nitin</abbr> is God</p>
+
+
+  <p><abbe title="Hyper Text Markup Language">HTML</abbe> is building block of the website</p>
+
+
+  <!-- Unarticulated Annotation -->
+   <p>This is a statement of <u>the Liberation</u> of greand marine</p>
+
+
+
+   <!-- Strikethrough  -->
+    <p> <s>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sit obcaecati quod tenetur, accusantium ipsa aperiam eaque in saepe earum fugiat praesentium voluptas </s> quis necessitatibus? </p>
+
+
+    <!-- Ruby For showing small text on the main text -->
+
+    <ruby style="font-size: 150px;">爱 <rp>(</rp><rt>Love</rt> <rp>)</rp></ruby>
+
+
+
+    <!-- Using form -->
+     <!-- It used for gether user information such as name email address phone
+      The action attribute specifies where the form date will be sent upon submissioin -->
+
+      <form action="mamilto:nitindharmesh01@gmail.com">
+        
+        <label for="name">Name: <input type="text" id="name"></label>
+        <label for="email">Email:<input 
+            required
+            name="email"
+            maxlength="64"
+            minlength="4"
+            
+            
+            
+            
+            
+            
+            
+            type="email" id="email" placeholder="Xyz@gmail.com"></label>
+        <label for="password">Password:<input required type="password" id="password"></label>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+      </form>
+
+
+
+
+
+
+
+
+      <!-- Buttons: -->
+       <!-- Type attribute controls the behaviour of button -->
+        <button type="button">Show Alert</button>
 </body>
+
+
 </html>

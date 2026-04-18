@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Practices</title>
+</head>
+<body>
+
+    <!-- Always use caption for the tables cuz it helps with accessibility  to understand the content of table -->
+
+    <table>
+
+        <caption>Our Pets</caption>
+
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Type</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td scope="row">Fluffy</td>
+                <td>3</td>
+                <td>Cat</td>
+            </tr>
+
+            <tr>
+                <td scope="row">Rover</td>
+                <td>5</td>
+                <td>Dog</td>
+            </tr>
+
+            <tr>
+                <td scope="row">Goldie</td>
+                <td>1</td>
+                <td>Fish</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- WAI-ARIA: Web Accessibility initiative - Accessible rich internet applications -->
+
+    <!-- It enhacne the accessiblity of dynamic content  and ui components -->
+
+    <!-- ARIA-Role: Define the purpose of element within the website or web page -->
+
+    <div role="button">Click Me</div>
+
+    <!-- Aria-label: let you connect an element to specific label -->
+     <h2 id="id_for">Nitin</h2>
+    <button id="btn_id" aria-labelledby="id_for btn_id">Click me </button>
+
+
+    <button role="alert" aria-describedby="delete-message">Delete</button>
+    <p id="delete-message">Are you sure you want to delete this item?</p>
+</body>
+</html>
