@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CSS: it allows us  adjust the layout and style based on the screen size  -->
+
+    <!-- Css: make our website more visually appealing to user -->
+
+    <!-- Cascading: it allows styles to be inherited and overriden in hireacrchile manner -->
+
+    <!-- Css Rules: set of styling rule for specific html element -->
+     <!-- It has selector and block of declarations -->
+
+     <!-- 
+     
+     selector{
+     
+     rules
+     }
+     -->
+     <h1>Learning about Css</h1>
+
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, sint.</p>
+
+     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid beatae temporibus necessitatibus libero, nobis possimus in debitis officia laboriosam, quia modi fugiat perspiciatis inventore nihil.</p>
+
+    
+     <!-- Width=device-width:
+      
+     tell broser to set the width of the page to match the width of the device ;
+     
+      this is essential for repsonsive layouts to adapat to diffrent screen size ; 
+     -->
+
+     <!-- initial-scale=1.0 set the initial zoom level when the page loaded the 1.0 mean it will be at 100% zoom -->;
+
+
+
+     <!-- Some of styles are already appllied to the web page these are called default web styles -->
+
+
+
+
+     <!-- Inline Css: it's written  inside the HTML element with the s tyle element -->
+
+     <!--  it mostly avoided cuz it make cluter to html and harder to mailtain code  -->
+
+     <!-- internal CSS : is Written inside the Style tage  in the head section of html document  -->
+
+     <!-- it's comman;y used for styling one page website but it become very hard to maintain -->
+
+
+     <!-- External CSS: is written in a separate .css file and linked to the HTML document -->
+
+     <!-- It's consistant to for styling the multiple webpages  -->
+
+
+     <div class="box"></div>
+
+     <!-- By default the height and width of the element are set to auto -->
+
+
+     <!-- min-width: it's the minimum width of an element can be even if the content is smalller it won't srink belowe the value   -->
+
+     <!-- Max-width: it's the maximum width of an element can be even if the content is larger it won't expand beyond the value   -->
+
+     <!-- min-height: it's the minimum height of an element can be even if the content is shorter it won't shrink below the value   -->
+
+     <!-- max-height: it's the maximum height of an element can be even if the content is taller it won't expand beyond the value   -->
+
+     <div class="min"></div>
+
+
+     <!-- Css Priporitise the min-width and min height over width height and maxwidth and height -->
+
+
+
+
+     <!-- Decendent combinator: it wil select all the child elemtn of the parent -->
+
+     <!-- Child Combinator: it will slect only direct child element -->
+
+     <!--  -->
+
+
+     <!-- EXample of desendent combinator -->
+
+    
+            <ol>
+                <li>Sub Item 1</li>
+                <li>Sub Item 2</li>
+            </ol>
+
+
+            <!-- ol li{
+    color: red;
+} -->
+
+
+<!-- Child Combinator: it only select the drict child of parent elemnet -->
+ <div class="lime">
+    <p>lime1</p>
+
+    <div>
+    <p>Lime2</p>
+    </div>
+
+ </div>
+
+ <!-- .lime > P{
+    color:green;
+}
+ -->
+
+ <!-- Next sibling combinator it will target next direct of the specific element -->
+
+ <!-- img + figcaption{
+  color:red; it will only target the figcaption
+  } -->
+        
+
+  <!-- Subsequent sibling combinator "it will target all the elemt after the specific element" -->
+
+  <!-- 
+  h2 ~p{
+  color:blue;}
+  }
+  
+  
+  -->
+
+
+
+  <!-- Block Element: takes up all the width avalible by default -->
+   <!-- This element start new line and puched other elements to next line
+     -->
+
+
+     <p class="blk">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, magni.</p>
+
+
+     <!-- inline Element: takes as much widht as needed don't start new line  -->
+
+     <div class="inline"></div>
+
+     <!-- you can add height and width in the inline element but you can add height and width in the block element -->;
+
+
+     <div class="line1">inline-block 1</div>
+     <div class="line2">inline-block 2</div>
+
+ <!-- Margin: (top/bottom) (left/right) -->
+  <!-- Margin: top right bottom left -->
+    
+</body>
+</html>

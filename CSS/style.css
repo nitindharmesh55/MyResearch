@@ -1,0 +1,46 @@
+p , h1{
+    color:blue
+}
+.box{
+    width:100px;
+    height: 100px;
+    background-color: skyblue;
+    border-radius: 5px;
+}
+.min{
+    width:50px;
+    height: 50px;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: yellow;
+}
+
+/* DESENDENT COMBINAOR */
+
+ol li{
+    color: red;
+}
+
+.lime > P{
+    color:green;
+}
+
+.blk{
+    border: 2px solid red;
+}
+
+.inline{
+    display: inline;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+
+}
+
+.line1 , .line2{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: skyblue
+}
+
