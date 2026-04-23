@@ -159,6 +159,33 @@
 
  <!-- Margin: (top/bottom) (left/right) -->
   <!-- Margin: top right bottom left -->
+
+
+
+  <!-- inline Specificity: The highest specificity is inline css it's written inside the html element with the style attribute -->
+
+  <p style="color: red;">Nitin</p>
+  <p>love1012</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, in?</p>
     
+
+  <!-- After the Inline css the Id selector has the higer specificity -->
+   <p id="second">Second Paragraph</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, fugiat?</p>
+
+
+   <!-- After Id it's The Class Selector and pesudo seclector -->
+    <!-- * Astrik has the loweset specificity -->
+
+<!-- 
+    a: Inline styles (1 or 0).
+b: Number of ID selectors.
+c: Number of class selectors, attribute selectors, and pseudo-classes.
+d: Number of type selectors, pseudo-elements, and universal selecto -->
+
+
+<!-- !important are the highest specificity for specific Style -->
+ 
 </body>
+
 </html>
