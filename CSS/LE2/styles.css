@@ -1,0 +1,30 @@
+ul li{
+    margin-bottom: 40px;
+    list-style-type:square;
+    list-style-position: inside;
+    
+} 
+.img{
+    background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+    min-height: 100px;
+    max-width: 100px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-attachment: scroll;
+}
+
+.lime{
+    width: 400px;
+    border-radius: 20px;
+    height: 150px;
+    background: linear-gradient(45deg, red , yellow);
+    margin-top: 50px;
+}
+.gard{
+    width: 400px;
+    border-radius: 20px;
+    height: 150px;
+    background: radial-gradient(ellipse farthest-corner at top right, red,pink 50%, darkblue);
+    margin-top: 50px;
+}

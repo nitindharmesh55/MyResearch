@@ -186,6 +186,25 @@ d: Number of type selectors, pseudo-elements, and universal selecto -->
 
 <!-- !important are the highest specificity for specific Style -->
  
+
+<!-- Cascade algorithm is the process of browser used to decide  which css rule apply when there are multiple rule targeting the same element -->
+
+
+<!-- If two rules have the same specificity the last one will be applied  -->
+
+<!-- Inheritance: how style pass down from parent to their child elements -->
+<!-- Properties like Color font-family  line-height are inherited from their parent elements -->
+
+<!-- some of the properties can not be inherited but we can do it by inherited keyword -->
+
+<!-- Example: -->
+
+<div class="parent" style="color: red; padding: 20px; background-color: lightgreen;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quas.
+    <p style="padding: inherit;">Nitin- is not cool</p>
+    <!-- but if you override the child element the inheritance will be no affect -->
+</div>
+
 </body>
 
 </html>

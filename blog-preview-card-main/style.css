@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #F5D04E;
+}
+.box{
+    max-width: 378px;
+    height: 526px;
+    background:white;
+    margin: 5% auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px black;
+}
+.box .poster{
+    max-width:334px;
+    height: 199px;
+    background-image: url(./assets/images/illustration-article.svg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    margin: 24px auto;
+    border-radius: 11px;
+}
+.box .info, article,.profile{
+    max-width: 334px;
+    margin:24px auto;
+}
+.learn{
+    width: 82px;
+    height: 29px;
+    background-color: #F5D04E;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -2%;
+    border-radius: 3px;
+    text-align: center;
+}
+.btn-info > p{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    color:black;
+    margin-top: 15px;
+    letter-spacing: -2%;
+}
+article > h2{
+    font-size: 23px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -2%;
+
+}
+
+article p{
+    font-size: 16px;
+    font-weight: 530;
+    width: 309px;
+    letter-spacing: -4%;
+    line-height:150%;
+    margin-top: 24px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+}
+.profile-pic{
+    width: 30px;
+    height: 30px;
+    background: url(assets/images/image-avatar.webp);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.profile p{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Media querys for the mobiles */
+
+@media (max-width: 375px) {
+  .box{
+    max-width:327px ;
+    height: 490px;
+    margin:5% auto ;
+  }
+  .box .poster{
+    max-width:278px ;
+    height: 201px;
+  }
+  .btn-info{
+   margin: 24px auto;
+   max-width: 278px;
+
+  }
+  .learn{
+    width: 72px;
+    height: 24px;;
+  }
+  .btn-info > p{
+    font-size: 12px;
+
+  }
+  article{
+    max-width: 278px;
+  }
+  article > h2{
+    font-size: 19px;
+  }
+  article p{
+    font-size: 13px;
+    width:245px;
+  }
+  .profile{
+    width: 278px;
+  }
+}
