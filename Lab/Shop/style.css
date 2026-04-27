@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(235, 235, 235);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0px auto;
+    max-width: 1200px;
+}
+header{
+    background: white;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header h1{
+    color: #5390ce;
+
+}
+nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    justify-content: flex-end;
+}
+nav a{
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.hero{
+    background: lightgray;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+.hero h2{
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+}
+.hero .learn{
+    background: #5390ce;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+
+}
+
+.products h3{
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    margin-top: 3rem;
+
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px , 1fr));
+    gap:1.5rem
+}
+
+.product-card{
+    background: white;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    text-align: center;
+}
+.product-card img{
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+}
+.product-card h4{
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.product-card button{
+    background-color:#219150;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.product-card button:hover{
+    background-color: #1e7a3c;
+}
+
+footer{
+    padding: 2rem 0;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+}
