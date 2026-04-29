@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    padding: 40px;
+    margin: 0;
+}
+
+h1{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section{
+    margin-bottom: 60px;
+}
+.box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: #3898db;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.asymmetrical .box:nth-child(2){
+    background: orangered;
+    transform: scale(1.5);
+}
+.description{
+    color: #333;
+    text-align: center;
+    font-style: italic;
+    margin-top: 50px;
+}
