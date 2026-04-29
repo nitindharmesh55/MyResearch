@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+}
+.container{
+    max-width: 800px;
+    margin: 0px auto;
+}
+.alignment{
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    border-left: 4px solid #3898db;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.alignment:hover{
+    transform: scale(1.02);
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
+}
+.alignment h2{
+    color: #3898db;
+    margin-bottom: 1rem;
+}
