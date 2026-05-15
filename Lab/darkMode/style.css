@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button{
+    padding: 18px 36px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(110, 110, 214);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+body.dark{
+    background-color: #121212;
+    color: white;
+}
+button.darkk{
+    background-color: rgb(255, 255, 255);
+    color: rgb(110, 110, 214);
+}
+.content{
+    margin-top: 20px;
+    text-align: center;
+    width:500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.saturated{
+    background-color: rgb(245, 14, 195);
+    color: rgb(255, 255, 255);
+}
+.desaturated{
+    background-color: #c472b5; 
+  color: white;
+}
+
+body.dark .saturated {
+  background-color: #ff00ff; 
+  color: black;
+}
+
+body.dark .desaturated {
+  background-color: #925f88; 
+  color: white;
+}
+
+.darkmode-example{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.box{
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      color: #111;
+      background: white;
+}
+
+body.dark .box.harsh-dark{
+    background: #000000;
+    color: white;
+}
+body.dark .box.soft-dark{
+    background: #1e1e1e;
+    color: #cccccc;
+}
+.breadcrumps{
+    margin-top:20px;
+    font-size: 0.9rem;
+    color: #555;
+    margin: 1rem 0;
+}
