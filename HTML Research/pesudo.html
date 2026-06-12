@@ -4,8 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo Class</title>
+    <style>
+        p::first-letter{
+            font-size: 5rem;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        li::marker{
+            font-size: 1.4rem;
+            color:crimson;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+
+        .cta-button{
+            background: orange;
+            border: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .cta-button::after{
+            content: "▶";
+            position: absolute;
+            right: 5px;
+            bottom: 6px;
+            font-size: 1.125rem;
+            transition:transform 0.3s ease;
+        }
+        .cta-button:hover::after{
+            transform: translateX(2px);
+        }
+    </style>
 </head>
 <body>
+    <!-- 
+    :Root; pseudo class is usually the root html element
+    Also commnonly used for setting css variables
+
+    :empty: in html there is white space an it's called empty
+
+
+    :nth-child(n) we can select element based on the position;
+
+    :first-child;
+    :last-child;
+    :only-child:
+
+
+    :first-of-type:
+    :last-of-type: pseudo classes select first and last occurrence of specific element type within its parent;
+
+
+    :nth-of-type(n) allows you to select a specific element within its parent based on the position
     
+    
+    -->
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur quaerat soluta dolorum commodi animi dolor, quo perspiciatis odio ullam sequi dignissimos earum consequuntur ipsam deserunt.</p>
+
+
+    <ul>
+  <li>Unordered list item 1</li>
+  <li>Unordered list item 2</li>
+  <li>Unordered list item 3</li>
+  <li>Unordered list item 4</li>
+</ul>
+
+<ol>
+  <li>Ordered list item 1</li>
+  <li>Ordered list item 2</li>
+  <li>Ordered list item 3</li>
+  <li>Ordered list item 4</li>
+</ol>
+
+
+<button class="cta-button">learn More</button>
+
+
 </body>
 </html>
