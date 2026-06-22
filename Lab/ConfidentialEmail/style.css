@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f0f0f0;
+}
+.container{
+    max-width: 500px;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px  solid black;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+p{
+    display: block;
+    margin: 25px;
+}
+.blurred{
+    filter: blur(3px);
+}
+
+#confidential, #top-secret{
+    text-transform: uppercase;
+    max-width: 200px;
+    box-sizing: border-box;
+    border: 5px solid rgb(214, 76, 76);
+    color:rgb(214,76,76);
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+#confidential{
+    transform: translate(150px , 50px) rotate(-30deg);
+}
+#top-secret{
+    transform: translate(150px , 350px) rotate(30deg);
+}
