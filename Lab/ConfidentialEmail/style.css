@@ -34,6 +34,7 @@ p{
     border: 5px solid rgb(214, 76, 76);
     color:rgb(214,76,76);
     font-weight: bold;
+    display: inline-block;
     font-size: 1rem;
     text-align: center;
     padding: 1rem;
@@ -43,5 +44,5 @@ p{
     transform: translate(150px , 50px) rotate(-30deg);
 }
 #top-secret{
-    transform: translate(150px , 350px) rotate(30deg);
+    transform: translate(100px , 350px) rotate(30deg);
 }
