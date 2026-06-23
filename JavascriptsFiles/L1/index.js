@@ -257,3 +257,7 @@ else if(numm < 0){
 else{
     console.log("You are must be 18+ use this site")
 }
+
+
+
+// Ternary Operator : 1:42:11
