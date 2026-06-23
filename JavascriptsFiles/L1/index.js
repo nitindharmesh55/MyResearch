@@ -193,3 +193,67 @@ const max = 100;
 let randomNum = Math.floor(Math.random()* (max- min)) + min;
 console.log(randomNum);
 
+
+
+// If Statement: if a condition is true excute some code;
+                    //  if not do somehitng else
+
+
+
+let UserAge =  25;
+
+if(UserAge >= 18){
+    console.log("You are old enough to enter this bar");
+
+}
+else{
+    console.log("Just Go Home")
+}
+
+
+let time =  9;
+if(time < 12){
+    console.log("Good Morning");
+    
+}
+else{
+    console.log("Good Afternoon")
+}
+
+
+let ISStudent =  false;
+if(ISStudent){
+    console.log("You are a student")
+}
+else{
+    console.log("you are not student");
+    
+}
+
+
+let userAGE =   25;
+let haslicense = false;
+
+if(userAGE >= 16){
+    console.log("You are old enough to drive");
+}
+else{
+   console.log("You must be 16+ to have a license");
+}
+
+
+let numm = 18;
+if(numm >= 100){
+    console.log("You are to old to enter");
+    
+}
+else if(numm >= 18){
+    console.log("You are old enough to enter this site")
+}
+else if(numm < 0){
+    console.log("You're age Can't be below 0")
+}
+
+else{
+    console.log("You are must be 18+ use this site")
+}
