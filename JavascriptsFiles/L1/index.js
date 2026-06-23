@@ -180,3 +180,16 @@ let zz;
 
 
 // 1:05:57 from bro code
+
+
+// let randomnum = Math.random(); // generate 0 - 1;
+
+let randomnum = Math.floor(Math.random() * 6) + 1; // 1 is here minimum number;
+console.log(randomnum);
+
+const min = 50;
+const max = 100;
+
+let randomNum = Math.floor(Math.random()* (max- min)) + min;
+console.log(randomNum);
+
