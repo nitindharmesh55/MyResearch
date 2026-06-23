@@ -95,12 +95,12 @@ console.log(student);
 // 1.: Easy Way : window prompt;
 // 2. Professional Way: Html textbox;
 
-let userName;
-window.prompt("What's your user name");
-document.getElementById("p1").textContent = `Your User Name is : ${userName}`;
+// let userName;
+// window.prompt("What's your user name");
+// document.getElementById("p1").textContent = `Your User Name is : ${userName}`;
 
 
-let UserName;
+// let UserName;
 
 let rim = function () {
     UserName = document.getElementById("myText").value;
@@ -113,10 +113,10 @@ document.getElementById("mysubmit").onclick = rim;
 // (string Number, boolean)
 
 
-let Age = window.prompt("How Old are you bruh:")
-Age = Number(Age);
-Age += 1;
-console.log(Age)
+// let Age = window.prompt("How Old are you bruh:")
+// Age = Number(Age);
+// Age += 1;
+// console.log(Age)
 
 
 let x = "pizza";
@@ -155,3 +155,28 @@ let Circumfrance =  function (){
     document.getElementById("france").textContent = `Circumfrance: ${circumfrance}`
 }
 document.getElementById("sub").onclick =  Circumfrance;
+
+
+
+
+// Math:
+// Built in object that provide a collection of properties and methods;
+console.log(Math.PI);
+
+let xx = 3.21;
+let yy = 2;
+let zz;
+// zz = Math.round(xx);
+// zz = Math.floor(xx);// round down;
+// zz = Math.ceil(xx); // round up;
+// zz = Math.trunc(xx);// truncation
+// zz = Math.pow(xx , 2);// power
+// zz = Math.sqrt(xx); //squreroot;
+// zz = Math.log(xx);//logrithim;
+// zz = Math.sin(xx);//sin function
+// zz = Math.cos(xx);// cos function 
+// zz = Math.tan(xx)// tan
+// zz = Math.abs(xx)// abosulte value
+
+
+// 1:05:57 from bro code
