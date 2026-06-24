@@ -260,4 +260,82 @@ else{
 
 
 
-// Ternary Operator : 1:42:11
+// Ternary Operator : 1:42:11 shortcut for the if else conditions;
+
+let USERAGE = 21;
+let MESSAGE = USERAGE >= 18 ? "You're  an adult" : "You're a Minor"
+
+
+let TIME = 16;
+let Greetings = TIME < 12 ? "Good Morning" : "Good Afternoon";
+console.log(Greetings);
+
+
+let STUDENT = true;
+let miss = STUDENT ? "You are a student" : "You are not a stuennt";
+console.log(miss);
+
+
+// 
+
+let purchaseAmount = 200;
+let discount =  purchaseAmount >= 100 ? 10 : 0;
+console.log(`Your Total: ${purchaseAmount - purchaseAmount * (discount / 100) }`)
+
+
+
+// Switch replacement for if else;
+
+let Day = 7;
+
+switch(Day){
+    case 1:
+        console.log("It is monday");
+        break;
+    case 2:
+        console.log("It is Tuesday");
+        break;
+    case 3:
+        console.log("It is Thirsday");
+        break;
+    case 4:
+        console.log("It is Wednesday");
+        break;
+    case 5:
+        console.log("It is Friday");
+        break;
+    case 6:
+        console.log("It is Saturday");
+        break;
+    case 7:
+        console.log("It is Sunday");
+        break;  
+    default:
+        console.log(`${Day} is not a Day`);
+        
+}
+
+
+let testScore = 92;
+let letterGrade;
+switch(true){
+    case testScore >= 90:
+        letterGrade = "A";
+        break;
+    case testScore >= 80:
+        letterGrade = "B";
+        break;
+    case testScore >= 70:
+        letterGrade = "C";
+        break;
+    case testScore >= 60:
+        letterGrade = "D"
+        break;
+    default:
+        letterGrade = "F";
+
+}
+
+console.log(letterGrade);
+
+
