@@ -29,3 +29,50 @@
 for(let i = 2; i <= 10; i+= 2){
     console.log(i);   
 }
+
+
+
+// Function:::  A section of reusable coe.
+//  Declare code onece use it whenever you want;
+// call the function to excute the code;
+
+
+// function happybirthday(username, age){
+//     console.log(`Happybirthday to you ${username}`);
+//     console.log(`You are ${age} old Today`);
+    
+// }
+
+// happybirthday("Nitin", 21);
+
+
+function addTwo(x, y){
+    let  result = x + y;
+    return result;
+}
+
+function subtract(x , y){
+    return x- y;
+}
+// let answer = subtract(5,10)
+// console.log(answer);
+
+
+// function isEven(number){
+//     return number % 2 === 0 ? true : false;
+// }
+// let answer =  isEven(14)
+// console.log((answer));
+
+
+function isvalid(email){
+    return email.includes("@") ? true : false;
+}
+let answer = isvalid("purabiyaneetin@gmail.com")
+console.log((answer));
+
+
+
+// Variable Scope: = Where a variable is recognized
+// And accessible (local vs global)
+
