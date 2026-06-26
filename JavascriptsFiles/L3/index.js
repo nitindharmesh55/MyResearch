@@ -75,4 +75,4 @@ console.log((answer));
 
 // Variable Scope: = Where a variable is recognized
 // And accessible (local vs global)
-
+ 
