@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+.container{
+    max-width: 600px;
+    margin: 0px auto;
+    text-align: center;
+}
+input{
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 25px;
+}
+button{
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    background: hsl(250, 50% , 45%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#Result{
+    margin-top: 25px;
+    font-size: 1.5rem;
+}
+#image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#image img{
+    width: 100px;
+    margin:25px 4px
+}
