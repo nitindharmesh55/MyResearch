@@ -75,4 +75,55 @@ console.log((answer));
 
 // Variable Scope: = Where a variable is recognized
 // And accessible (local vs global)
+
+
+
+
+// Arrays: Variable like structure that hold more than 1 value;
+
  
+let fruits = ["apple", "Bananan", "Orange"];
+console.log(fruits[0]);// apple;
+console.log(fruits[1]);// Bananana
+console.log(fruits[2]);//"Orange"
+
+// Changeing array;
+fruits[0] = "Coconuts";
+
+fruits.push("Peach")// adding the element at the last of fruits array;
+
+// fruits.pop()// will remove the last element of fruits
+
+
+// Adding at the begining;
+
+fruits.unshift("Mango");
+fruits.shift()// remove the element from the beginig;
+
+
+// To find the length of the fruits;
+fruits.length;
+
+
+// To find index of the element;
+let index = fruits.indexOf("apple");
+
+
+
+for(let i = 0; i < fruits.length; i++){
+    console.log(fruits[i]);
+}
+
+
+// Advance loops;
+for(let fruit of fruits){
+    console.log(fruit);
+    
+}
+
+// Sort method;
+fruits.sort();
+
+// Reverse Method;
+fruits.sort().reverse();
+
