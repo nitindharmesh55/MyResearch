@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ padding: 2rem;
+}
+.container{
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 20px;
+
+}
+
+ /* ♠, ♣, ♥, and ♦. */
+
+.card{
+    width:200px;
+    border-radius: 5px;
+    min-height: 350px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.top,.bottom{
+    padding: 8px;
+    margin: 0;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.top span{
+    font-size: 1.85rem;
+    margin: 0;
+}
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    width: 150px;
+    /* gap:-10px; */
+    align-self: center;
+}
+.middle span{
+    font-size: 5rem;
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.bottom span{
+    font-size: 1.85rem;
+    transform: rotate(180deg);
+}
+.down{
+    transform: rotate(180deg);
+    margin: -20px;
+}
+.up{
+    margin: -20px;
+}
+.icon{
+    color: rgb(201, 26, 55);
+}
