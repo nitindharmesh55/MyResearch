@@ -1,0 +1,32 @@
+h1{
+    font-family: serif;
+}
+h2{
+    font-family: sans-serif;
+}
+
+/* Serif has caps but sans-serif doesn't  have caps*/
+#roboto{
+    font-family: 'Roboto';
+    font-size: 2rem;
+}
+#open-sans{
+    font-family: 'Open Sans';
+    font-size: 2rem;
+}
+#poppins{
+    font-family: "poppins";
+    font-size: 2rem;
+}
+#lato{
+    font-family: "lato";
+    font-size: 2rem;
+}
+#Barlow{
+    font-family: "Barlow";
+    font-size: 2rem;
+}
+#arial{
+    font-family:Arial, "Lato", sans-serif;
+    font-size: 2rem;
+}
