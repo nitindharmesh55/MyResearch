@@ -53,3 +53,15 @@ font-weight: 700;
 }
 
 /* Stpes:36 */
+.calories-info span{
+  font-size:2.4em;
+  font-weight: 700;
+  margin:-7px -2px;
+}
+.medium{
+  height: 5px;
+}
+.right{
+  justify-content: flex-end;
+  display: flex;
+}
