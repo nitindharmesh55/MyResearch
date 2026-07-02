@@ -1,0 +1,46 @@
+html{
+    font-size: 24px;
+}
+body{
+    font-family: sans-serif;
+    background: #f5f6f7;
+}
+.newspaper{
+    max-width: 65%;
+    margin: 20px auto;
+    background: white;
+    padding: 24px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+}
+.timeDate{
+    display: flex;
+    flex-direction: column;
+   margin-bottom: 24px; 
+}
+.timeDate .name{
+    font-size: 2em;
+    font-family: "New Times Roman", serif;
+}
+.timeDate .date{
+    font-size: 0.75em;
+    color: #666;
+}
+.headline{
+    font-weight: bold;
+    width: 100%;
+    /* line-height: 1.2em; */
+}
+.text{
+    font-size: 0.70em;
+    text-indent: 20px;
+    line-height: 1.6;
+    text-align: justify;
+
+}
+.text::first-letter{
+    font-size:1.5em;
+    font-weight: bold;
+    margin: 5px;
+}
