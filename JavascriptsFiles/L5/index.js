@@ -80,3 +80,36 @@ function capitalize(element, index, array){
     console.log(result);
     
 }
+
+//Map funciton;
+// Accept a callback function and applies that function to each element of an array and it return new arrays;
+
+const numberss = [1, 2, 3, 4, 5];
+const squares = numberss.map(square);
+console.log(squares);
+
+function square(element){
+ return Math.pow(element,2);
+}
+
+const cubes = numberss.map(cube);
+const lime = cubes.forEach(displayCubes);
+console.log(lime);
+
+
+function displayCubes(element) {
+    console.log(element);
+}
+
+console.log(cubes);    
+function cube(element){
+    return Math.pow(element, 3);
+}
+
+
+const students = ["spongebob", "patrics", "squidword"];
+const upperCaseStudents = students.map(upperCaseMethod);
+console.log(upperCaseStudents);
+function upperCaseMethod(element){
+    return element.toUpperCase();
+}
