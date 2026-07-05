@@ -36,3 +36,25 @@ for (let i = 5; i > 0; i--){
     
 }
 console.log(number);
+
+const fruits = ["Apple","Banana","Mango","Orange"];
+fruits.forEach(displayElements);
+function displayElements(elments , index){
+    console.log(`${index + 1}: ${elments}`)    
+}
+const numbers = [2, 4, 6, 8];
+const three  = numbers.map(multipleof3);
+console.log(three);
+
+function multipleof3(element){
+    return element * 3;
+}
+
+
+const names = ["nitin", "john", "emma"];
+const CaptializeNames = names.map(capitalize);
+console.log(CaptializeNames);
+
+function capitalize(name){
+    return name.charAt(0).toUpperCase() + name.slice(1);
+}
