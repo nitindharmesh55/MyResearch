@@ -113,3 +113,40 @@ console.log(upperCaseStudents);
 function upperCaseMethod(element){
     return element.toUpperCase();
 }
+
+const names = ["Jack", "Jill", "John"];
+const capNames = names.map(capNameFromLie);
+console.log(capNames);
+function capNameFromLie(element){
+    return element.charAt(0).toUpperCase() + element.slice(1);
+}
+
+
+// const Dates = ["2023-01-01", "2023-02-15", "2023-03-30"];
+// const formatedDates = Dates.map(formateDate);
+// console.log(formatedDates);
+
+// function formateDate(element){
+//     const parts = element.split("-");
+//     return `${parts[1]}/${parts[2]}/${parts[0]}`;
+// }
+
+
+// formating Dates
+
+ const dates = [
+  "2026-01-15",
+  "2026-02-20",
+  "2026-03-10",
+  "2026-04-05",
+  "2026-05-18",
+  "2026-06-22",
+  "2026-07-30"
+];
+const formattedDates = dates.map(formateDate);
+console.log(formattedDates);
+
+function formateDate(element){
+    const parts = element.split("-");
+    return `${parts[1]}/${parts[2]}/${parts[0]}`;
+}
