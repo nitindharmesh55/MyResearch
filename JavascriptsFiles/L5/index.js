@@ -150,3 +150,35 @@ function formateDate(element){
     const parts = element.split("-");
     return `${parts[1]}/${parts[2]}/${parts[0]}`;
 }
+
+
+
+// Filter(): Create a new aaray by filtering out elements;
+const primeNumbers = [5, 12, 8, 21, 3, 17, 9, 30];
+const iseachNumber = primeNumbers.forEach(iseach);
+console.log(iseachNumber);
+
+const ismapNumber = primeNumbers.map(ismap);
+console.log(ismapNumber);
+
+const isfiilterNumber = primeNumbers.filter(isfilter);
+console.log(isfiilterNumber);
+
+
+
+// Foreach;
+function iseach(element){
+    return element % 2 === 0;
+}
+
+//Map 
+function ismap(element) {
+    return element % 2 === 0;
+}
+
+// Filter;
+
+function isfilter(element){
+    return element % 2 === 0;
+}
+
