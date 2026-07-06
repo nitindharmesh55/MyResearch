@@ -167,3 +167,40 @@ function ActivePeople(element){
  return element.active;
 }
 
+// 🛒 Project 3 — Shopping Cart (Level 2)
+const cartItems = [
+    {
+        product: "Laptop",
+        price: 65000,
+        inStock: true
+    },
+    {
+        product: "Monitor",
+        price: 18000,
+        inStock: false
+    },
+    {
+        product: "Mouse",
+        price: 1200,
+        inStock: true
+    },
+    {
+        product: "Keyboard",
+        price: 3500,
+        inStock: true
+    }
+];
+
+const cartContainer = document.querySelector("#cartContainer");
+const stockItems = cartItems.filter(element => element.inStock)
+stockItems.forEach(DisplayItems);
+function DisplayItems(element) {
+    const div = document.createElement("div");
+    div.classList.add("product-card");
+    const h2 = document.createElement("h2");
+    const p = document.createElement("p");
+    h2.textContent = element.product;
+    p.textContent = `₹${element.price}`
+    div.append(h2, p);
+    cartContainer.append(div);
+}
