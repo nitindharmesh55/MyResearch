@@ -250,3 +250,56 @@ function Dashboard(element){
     div.append(h2,p,span);
     employeeContainer.append(div);
 }
+
+
+// 🛒 Project 5 — E-Commerce Store (Level 4)
+const productss = [
+    {
+        name: "Laptop",
+        price: 65000,
+        rating: 4.8,
+        inStock: true
+    },
+    {
+        name: "Mouse",
+        price: 1200,
+        rating: 4.2,
+        inStock: true
+    },
+    {
+        name: "Keyboard",
+        price: 3500,
+        rating: 3.8,
+        inStock: true
+    },
+    {
+        name: "Monitor",
+        price: 18000,
+        rating: 4.7,
+        inStock: false
+    },
+    {
+        name: "Headphones",
+        price: 4200,
+        rating: 4.9,
+        inStock: true
+    }
+];
+
+const storeContainer = document.querySelector("#storeContainer");
+const instokes = productss.filter(element => element.inStock && element.rating >= 4.5 );
+instokes.forEach(getProducts);
+function getProducts(elemetns) {
+    const div = document.createElement("div");
+    div.classList.add("product-card");
+    const h2 = document.createElement("h2");
+    h2.textContent = elemetns.name;
+    const p = document.createElement("p");
+    p.textContent = `₹${elemetns.price}`
+    const span = document.createElement("span");
+    span.textContent = `⭐ ${elemetns.rating}`
+    const h3 =  document.createElement("h3");
+    h3.textContent = `Total Products Displayed: ${instokes.length}`
+    div.append(h2, p, span , h3);
+    storeContainer.append(div)
+}
