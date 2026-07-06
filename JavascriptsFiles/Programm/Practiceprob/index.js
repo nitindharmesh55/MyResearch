@@ -303,3 +303,42 @@ function getProducts(elemetns) {
     div.append(h2, p, span , h3);
     storeContainer.append(div)
 }
+
+
+
+// 🔥 Project 6 — Admin Panel (Level 5)
+const students = [
+    { name: "Nitin", marks: 95, passed: true },
+    { name: "Alex", marks: 42, passed: false },
+    { name: "Emma", marks: 88, passed: true },
+    { name: "Ryan", marks: 61, passed: true },
+    { name: "Sophia", marks: 35, passed: false }
+];
+
+const studentContainer = document.querySelector("#studentContainer");
+
+students.forEach(DisplayStudents);
+function DisplayStudents(element){
+    const passStudent = document.createElement("div")
+    passStudent.classList.add("student", "pass");
+    const FailStudent = document.createElement("div")
+    FailStudent.classList.add("student", "fail");
+    const h2 = document.createElement("h2")
+    const p = document.createElement("p")
+    const span = document.createElement("span");
+
+    if(element.passed){
+        h2.textContent = element.name;
+        p.textContent = `Marks: ${element.marks}`;
+        span.textContent = "PASS";
+        passStudent.append(h2, p, span);
+        studentContainer.append(passStudent)
+    }
+    if (!element.passed) {
+        h2.textContent = element.name;
+        p.textContent = `Marks: ${element.marks}`;
+        span.textContent = "FAIL"
+        FailStudent.append(h2,p,span);
+        studentContainer.append(FailStudent);
+    }
+}
