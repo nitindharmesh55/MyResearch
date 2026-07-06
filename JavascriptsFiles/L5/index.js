@@ -182,3 +182,22 @@ function isfilter(element){
     return element % 2 === 0;
 }
 
+// .reduce(): reduce the element of an array to a single value;
+
+
+const prices = [25,10,55,45,12];
+const total = prices.reduce(sum);
+console.log(total);
+
+
+function sum(accumulator, element){
+    return accumulator + element;
+
+}
+
+
+const grades = [75,85,95,65,45];
+const maxValue =  grades.reduce(getMAx);
+function getMAx(acc,element){
+    return Math.max(acc,element);
+}
