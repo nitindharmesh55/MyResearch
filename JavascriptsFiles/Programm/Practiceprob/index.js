@@ -140,3 +140,30 @@ function dynamicProduct(element){
     return div;
 }
 productContainer.append(...newProducts)
+
+
+
+// Project 2: Project 2 — User Directory (filter + DOM) ⭐⭐;
+
+const users = [
+    { username: "Nitin", active: true },
+    { username: "Alex", active: false },
+    { username: "Emma", active: true },
+    { username: "Ryan", active: false },
+    { username: "Sophia", active: true }
+];
+
+const userContainer = document.querySelector("#userContainer");
+const ActiveUsers = users.filter(ActivePeople);
+console.log(ActiveUsers[0]);
+console.log("love");
+
+function ActivePeople(element){
+ if (element.active) {
+    const p = document.createElement("p");
+    p.textContent = element.username;
+    userContainer.append(p);
+ }
+ return element.active;
+}
+
