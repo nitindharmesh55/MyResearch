@@ -342,3 +342,57 @@ function DisplayStudents(element){
         studentContainer.append(FailStudent);
     }
 }
+
+
+
+// function DisplayStudents(element) {
+//     const student = document.createElement("div");
+
+//     student.classList.add(
+//         "student",
+//         element.passed ? "pass" : "fail"
+//     );
+
+//     const h2 = document.createElement("h2");
+//     const p = document.createElement("p");
+//     const span = document.createElement("span");
+
+//     h2.textContent = element.name;
+//     p.textContent = `Marks: ${element.marks}`;
+//     span.textContent = element.passed ? "PASS" : "FAIL";
+
+//     student.append(h2, p, span);
+//     studentContainer.append(student);
+// }
+
+
+
+
+
+// 🔥 Project 7 — Employee Directory
+const employeesss = [
+    { name: "John", department: "IT", salary: 65000 },
+    { name: "Emma", department: "HR", salary: 50000 },
+    { name: "Alex", department: "Finance", salary: 72000 },
+    { name: "Sophia", department: "Marketing", salary: 55000 }
+];
+
+const employeeContainerr = document.getElementById("employeeContainerr");
+
+employeesss.forEach(DisplayEmployees);
+function DisplayEmployees(element){
+    const div = document.createElement("div");
+    div.classList.add("employee");
+    const h2 = document.createElement("h2");
+    h2.textContent = element.name;
+
+    const p = document.createElement("p");
+    p.textContent =  `Department: ${element.department}`;
+
+    const span = document.createElement("span");
+    span.textContent = `₹${element.salary}`
+
+    div.append(h2,p,span);
+    
+    employeeContainerr.append(div);
+}
