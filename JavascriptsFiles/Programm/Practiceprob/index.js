@@ -130,13 +130,13 @@ const products = [
 
 const productContainer = document.querySelector("#productContainer");
 const newProducts = products.map(dynamicProduct);
-function dynamicProduct(element){
+function dynamicProduct(element) {
     const div = document.createElement("div");
     const h2 = document.createElement("h2");
     const p = document.createElement("p");
     h2.textContent = element.name;
     p.textContent = element.price;
-    div.append(h2,p);
+    div.append(h2, p);
     return div;
 }
 productContainer.append(...newProducts)
@@ -158,13 +158,13 @@ const ActiveUsers = users.filter(ActivePeople);
 console.log(ActiveUsers[0]);
 console.log("love");
 
-function ActivePeople(element){
- if (element.active) {
-    const p = document.createElement("p");
-    p.textContent = element.username;
-    userContainer.append(p);
- }
- return element.active;
+function ActivePeople(element) {
+    if (element.active) {
+        const p = document.createElement("p");
+        p.textContent = element.username;
+        userContainer.append(p);
+    }
+    return element.active;
 }
 
 // 🛒 Project 3 — Shopping Cart (Level 2)
@@ -203,4 +203,50 @@ function DisplayItems(element) {
     p.textContent = `₹${element.price}`
     div.append(h2, p);
     cartContainer.append(div);
+}
+
+
+// 🏆 Project 4 — Admin Dashboard (Level 3)
+const employeess = [
+    {
+        name: "Ava",
+        department: "Engineering",
+        salary: 95000
+    },
+    {
+        name: "Noah",
+        department: "Marketing",
+        salary: 42000
+    },
+    {
+        name: "Liam",
+        department: "Engineering",
+        salary: 88000
+    },
+    {
+        name: "Emma",
+        department: "HR",
+        salary: 52000
+    },
+    {
+        name: "Sophia",
+        department: "Engineering",
+        salary: 105000
+    }
+];
+
+const employeeContainer = document.querySelector("#employeeContainer");
+const employeeEarn = employeess.filter(element => element.department === "Engineering" && element.salary >= 90000);
+employeeEarn.forEach(Dashboard);
+function Dashboard(element){
+    const div = document.createElement("div");
+    div.classList.add("employee-card");
+    const h2 = document.createElement("h2");
+    const p = document.createElement("p");
+    const span =  document.createElement("span");
+    h2.textContent = element.name;
+    p.textContent = element.department;
+    span.textContent =  `₹${element.salary}`;
+    div.append(h2,p,span);
+    employeeContainer.append(div);
 }
