@@ -396,3 +396,31 @@ function DisplayEmployees(element){
     
     employeeContainerr.append(div);
 }
+
+
+// 🔥 Project 8 — Product Cards;
+// 🔥 Project 8 — Tech Store Showcase
+const gadgetVault = [
+    { title: "MacBook Air", cost: 99999, available: true },
+    { title: "AirPods Pro", cost: 24999, available: false },
+    { title: "iPad Mini", cost: 54999, available: true },
+    { title: "Apple Watch", cost: 45999, available: false }
+];
+
+const showroom =  document.getElementById("showroom");
+gadgetVault.forEach(DisplayGadget);
+function DisplayGadget(element){
+    const div = document.createElement("div");
+    div.classList.add("item",element.available ?"available":"unvailable");
+    const h2 = document.createElement("h2");
+    h2.textContent = element.title;
+    const p = document.createElement("p");
+    p.textContent = `₹${element.cost}`;
+    
+    const span = document.createElement("span");
+    span.textContent = element.available ? "Available" :"Unavailable";
+
+    div.append(h2,p,span);
+    showroom.append(div);
+
+}
