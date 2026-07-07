@@ -477,7 +477,60 @@ function travelDestination(travel) {
     ratting.textContent = travel.popular ? "⭐ Popular Choice" : "";
     ratting.style.display = travel.popular ? "inline-block" : "none";
 
-    container.append(ratting,h2, p, span, button);
+    container.append(ratting, h2, p, span, button);
     travelGallery.append(container);
+
+}
+
+
+// 🔥 Project 10 — Book Shelf Manager;
+const bookShelf = document.getElementById("bookShelf");
+const libraryShelf = [
+    {
+        title: "Atomic Habits",
+        author: "James Clear",
+        pages: 320
+    },
+    {
+        title: "Deep Work",
+        author: "Cal Newport",
+        pages: 304
+    },
+    {
+        title: "The Pragmatic Programmer",
+        author: "Andrew Hunt",
+        pages: 352
+    },
+    {
+        title: "Clean Code",
+        author: "Robert C. Martin",
+        pages: 464
+    }
+];
+
+libraryShelf.forEach(DisplayBooks);
+function DisplayBooks(book) {
+    const container = document.createElement("div");
+    container.classList.add("book-card");
+    const h2 = document.createElement("h2");
+    h2.textContent = book.title;
+
+    const p = document.createElement("p");
+    p.textContent = book.author;
+
+    const span = document.createElement("span");
+    span.textContent = `${book.pages} Pages`;
+
+    const button = document.createElement("button");
+    button.textContent = "Remove"
+    button.onclick = () => {
+        container.remove();
+    }
+    const label = document.createElement("span");
+    label.classList.add("label");
+    label.textContent = book.pages > 350 ? "📚 Long Read" :"⚡ Quick Read";
+
+    container.append(label,h2, p, span, button);
+    bookShelf.append(container)
 
 }
