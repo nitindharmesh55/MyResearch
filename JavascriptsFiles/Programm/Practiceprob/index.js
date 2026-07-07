@@ -534,3 +534,133 @@ function DisplayBooks(book) {
     bookShelf.append(container)
 
 }
+
+
+// 🔥 Project 11 — Music Playlist (Interactive)
+const melodyBox = [
+    {
+        song: "Blinding Lights",
+        artist: "The Weeknd",
+        liked: false
+    },
+    {
+        song: "Night Changes",
+        artist: "One Direction",
+        liked: false
+    },
+    {
+        song: "Believer",
+        artist: "Imagine Dragons",
+        liked: false
+    },
+    {
+        song: "Heat Waves",
+        artist: "Glass Animals",
+        liked: false
+    }
+];
+
+const playList = document.getElementById("playlist");
+
+melodyBox.forEach(PlayTime)
+
+function PlayTime(music){
+    const div = document.createElement("div");
+    div.classList.add("track")
+    const songName =  document.createElement("h2")
+    songName.textContent = music.song;
+
+    const artistName = document.createElement("p");
+    artistName.textContent = music.artist;
+
+    const Like = document.createElement("button");
+    Like.classList.add("like");
+    Like.textContent = "❤ Like";
+
+    Like.onclick = ()=>{
+        Like.classList.toggle("liked");
+        if(Like.classList.contains("liked")){
+            Like.textContent = "❤ Liked"
+        }
+        else{
+            Like.textContent = "❤ Like"
+        }
+    
+    }
+    div.append(songName,artistName,Like);
+    playList.append(div);
+
+}
+
+
+// 🔥 Project 12 — Course Enrollment Dashboard
+const academyHub = [
+    {
+        course: "JavaScript Mastery",
+        instructor: "Sarah Johnson",
+        enrolled: false
+    },
+    {
+        course: "Node.js Essentials",
+        instructor: "David Miller",
+        enrolled: false
+    },
+    {
+        course: "UI Design Fundamentals",
+        instructor: "Emily Carter",
+        enrolled: false
+    },
+    {
+        course: "React Bootcamp",
+        instructor: "Michael Brown",
+        enrolled: false
+    }
+];
+const courseBoard = document.getElementById("courseBoard");
+academyHub.forEach(StudentEnroll);
+function StudentEnroll(student) {
+    
+    const div = document.createElement("div");
+    div.classList.add("course-card");
+
+    const courseName = document.createElement("h2");
+    courseName.textContent = student.course;
+
+    const instructor = document.createElement("p");
+    instructor.textContent = student.instructor;
+
+    const Enroll = document.createElement("button");
+    Enroll.classList.add("enroll-btn");
+    Enroll.textContent = "Enroll";
+    Enroll.onclick = () =>{
+        div.classList.toggle("enrolled");
+        if (div.classList.contains("enrolled")) {
+            Enroll.textContent = "Enrolled ✅"
+        }
+        else{
+            Enroll.textContent = "Enroll";
+        }
+    }
+    const paragrapgh = document.createElement("div");
+    const par = document.createElement("span");
+    const show = document.createElement("button");
+    show.classList.add("detail-btn");
+    show.textContent = "Show Details";
+
+    show.onclick = ()=>{
+        show.classList.toggle("hide");
+        if (show.classList.contains("hide")) {
+            par.textContent = "Duration: 8 Weeks";
+            show.textContent = "Hide Details"
+        }
+        else{
+            par.textContent = "";
+            show.textContent = "Show Details";
+        }
+    }
+    paragrapgh.append(par,show)
+
+
+    div.append(courseName,instructor,Enroll, paragrapgh);
+    courseBoard.append(div);
+}

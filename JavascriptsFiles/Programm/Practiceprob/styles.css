@@ -138,3 +138,35 @@
     background-color: rgb(158, 46, 46);
     color: white;
 }
+
+
+/* Project 11 */
+
+#playlist{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.track{
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+  margin: 10px;
+  padding: 24px;
+}
+.track button{
+  border: none;
+  color: black;
+  background: transparent;
+  /* padding: 10px 20px; */
+  text-align: left;
+  font-size: 1rem;
+}
+.like{
+  background: transparent;
+  color: black;
+}
+.like.liked{
+  background: transparent;
+  color: red;
+  font-weight: bold;
+}
