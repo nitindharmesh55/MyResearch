@@ -238,16 +238,16 @@ const employeess = [
 const employeeContainer = document.querySelector("#employeeContainer");
 const employeeEarn = employeess.filter(element => element.department === "Engineering" && element.salary >= 90000);
 employeeEarn.forEach(Dashboard);
-function Dashboard(element){
+function Dashboard(element) {
     const div = document.createElement("div");
     div.classList.add("employee-card");
     const h2 = document.createElement("h2");
     const p = document.createElement("p");
-    const span =  document.createElement("span");
+    const span = document.createElement("span");
     h2.textContent = element.name;
     p.textContent = element.department;
-    span.textContent =  `₹${element.salary}`;
-    div.append(h2,p,span);
+    span.textContent = `₹${element.salary}`;
+    div.append(h2, p, span);
     employeeContainer.append(div);
 }
 
@@ -287,7 +287,7 @@ const productss = [
 ];
 
 const storeContainer = document.querySelector("#storeContainer");
-const instokes = productss.filter(element => element.inStock && element.rating >= 4.5 );
+const instokes = productss.filter(element => element.inStock && element.rating >= 4.5);
 instokes.forEach(getProducts);
 function getProducts(elemetns) {
     const div = document.createElement("div");
@@ -298,9 +298,9 @@ function getProducts(elemetns) {
     p.textContent = `₹${elemetns.price}`
     const span = document.createElement("span");
     span.textContent = `⭐ ${elemetns.rating}`
-    const h3 =  document.createElement("h3");
+    const h3 = document.createElement("h3");
     h3.textContent = `Total Products Displayed: ${instokes.length}`
-    div.append(h2, p, span , h3);
+    div.append(h2, p, span, h3);
     storeContainer.append(div)
 }
 
@@ -318,7 +318,7 @@ const students = [
 const studentContainer = document.querySelector("#studentContainer");
 
 students.forEach(DisplayStudents);
-function DisplayStudents(element){
+function DisplayStudents(element) {
     const passStudent = document.createElement("div")
     passStudent.classList.add("student", "pass");
     const FailStudent = document.createElement("div")
@@ -327,7 +327,7 @@ function DisplayStudents(element){
     const p = document.createElement("p")
     const span = document.createElement("span");
 
-    if(element.passed){
+    if (element.passed) {
         h2.textContent = element.name;
         p.textContent = `Marks: ${element.marks}`;
         span.textContent = "PASS";
@@ -338,7 +338,7 @@ function DisplayStudents(element){
         h2.textContent = element.name;
         p.textContent = `Marks: ${element.marks}`;
         span.textContent = "FAIL"
-        FailStudent.append(h2,p,span);
+        FailStudent.append(h2, p, span);
         studentContainer.append(FailStudent);
     }
 }
@@ -380,20 +380,20 @@ const employeesss = [
 const employeeContainerr = document.getElementById("employeeContainerr");
 
 employeesss.forEach(DisplayEmployees);
-function DisplayEmployees(element){
+function DisplayEmployees(element) {
     const div = document.createElement("div");
     div.classList.add("employee");
     const h2 = document.createElement("h2");
     h2.textContent = element.name;
 
     const p = document.createElement("p");
-    p.textContent =  `Department: ${element.department}`;
+    p.textContent = `Department: ${element.department}`;
 
     const span = document.createElement("span");
     span.textContent = `₹${element.salary}`
 
-    div.append(h2,p,span);
-    
+    div.append(h2, p, span);
+
     employeeContainerr.append(div);
 }
 
@@ -407,20 +407,77 @@ const gadgetVault = [
     { title: "Apple Watch", cost: 45999, available: false }
 ];
 
-const showroom =  document.getElementById("showroom");
+const showroom = document.getElementById("showroom");
 gadgetVault.forEach(DisplayGadget);
-function DisplayGadget(element){
+function DisplayGadget(element) {
     const div = document.createElement("div");
-    div.classList.add("item",element.available ?"available":"unvailable");
+    div.classList.add("item", element.available ? "available" : "unvailable");
     const h2 = document.createElement("h2");
     h2.textContent = element.title;
     const p = document.createElement("p");
     p.textContent = `₹${element.cost}`;
-    
-    const span = document.createElement("span");
-    span.textContent = element.available ? "Available" :"Unavailable";
 
-    div.append(h2,p,span);
+    const span = document.createElement("span");
+    span.textContent = element.available ? "Available" : "Unavailable";
+
+    div.append(h2, p, span);
     showroom.append(div);
+
+}
+
+// 🔥 Project 9 — Travel Destination Cards
+const wanderList = [
+    {
+        place: "Kyoto",
+        country: "Japan",
+        budget: 85000,
+        popular: true
+    },
+    {
+        place: "Reykjavik",
+        country: "Iceland",
+        budget: 145000,
+        popular: false
+    },
+    {
+        place: "Bali",
+        country: "Indonesia",
+        budget: 65000,
+        popular: true
+    },
+    {
+        place: "Zurich",
+        country: "Switzerland",
+        budget: 165000,
+        popular: false
+    }
+];
+
+const travelGallery = document.getElementById("travelGallery");
+
+wanderList.forEach(travelDestination);
+function travelDestination(travel) {
+    const container = document.createElement("div");
+    container.classList.add("destination", travel.popular ? "featured" : "standard");
+    const h2 = document.createElement("h2");
+    h2.textContent = travel.place;
+
+    const p = document.createElement("p");
+    p.textContent = travel.country;
+
+    const span = document.createElement("span");
+    span.textContent = `₹${travel.budget}`
+
+    const button = document.createElement("button");
+    button.classList.add("button", travel.popular ? "featured" : "standard");
+    button.textContent = travel.popular ? "Book Now" : "Coming Soon";
+
+    const ratting = document.createElement("span");
+    ratting.classList.add("ratting");
+    ratting.textContent = travel.popular ? "⭐ Popular Choice" : "";
+    ratting.style.display = travel.popular ? "inline-block" : "none";
+
+    container.append(ratting,h2, p, span, button);
+    travelGallery.append(container);
 
 }
