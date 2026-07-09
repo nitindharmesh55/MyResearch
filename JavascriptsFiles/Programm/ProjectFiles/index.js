@@ -104,3 +104,103 @@ function GetTask(task) {
     missionBoards.append(container);
 }
 
+
+
+// 🔥 Project 14 — Movie Review Hub
+const cinemaVault = [
+    {
+        title: "Interstellar",
+        director: "Christopher Nolan",
+        rating: 8.7,
+        favorite: false
+    },
+    {
+        title: "Parasite",
+        director: "Bong Joon-ho",
+        rating: 8.5,
+        favorite: false
+    },
+    {
+        title: "Spirited Away",
+        director: "Hayao Miyazaki",
+        rating: 8.6,
+        favorite: false
+    },
+    {
+        title: "Whiplash",
+        director: "Damien Chazelle",
+        rating: 8.5,
+        favorite: false
+    }
+];
+
+const movieHub =  document.getElementById("movieHub");
+cinemaVault.forEach(MovieUpdate);
+
+function MovieUpdate(movie) {
+    const container = document.createElement("div");
+    container.classList.add("movie-card");
+
+    const MovieName =  document.createElement("h2");
+    MovieName.textContent = movie.title;
+
+
+    const Director = document.createElement("p");
+    Director.textContent =  movie.director;
+
+    const rating =  document.createElement("span");
+    rating.textContent  = `⭐ ${movie.rating}`;
+
+    // action buttons;
+
+    const actionContainer =  document.createElement("div");
+    actionContainer.classList.add("action");
+
+    // Favorite button;
+    const Favorite =  document.createElement("button");
+    Favorite.classList.add("fav-btn");
+    Favorite.textContent = "❤ Favorite";
+
+
+    const Rate =  document.createElement("button");
+    Rate.classList.add("rate-btn");
+    Rate.textContent = "Rate";
+
+
+    
+    const DeletBtn  =  document.createElement("button");
+    DeletBtn.classList.add("remove-btn");
+    DeletBtn.textContent = "Remove";
+
+
+    Favorite.addEventListener("click", ()=>{
+        Favorite.classList.toggle("favorite");
+        if (Favorite.classList.contains("favorite")) {
+            Favorite.textContent = "❤️ Favorited"  
+        }
+        else{
+            Favorite.textContent =  "❤ Favorite";
+        }
+    });
+
+    Rate.addEventListener("click", ()=>{
+        const Rating =  Number(prompt("Enter a new rating (0 - 10): "));
+        if (!isNaN(Rating) && Rating >= 0 && Rating <= 10){
+            movie.rating = Rating;
+            rating.textContent = `⭐ ${movie.rating}`
+        }
+        else{
+            alert("Please Enter Valid Number:")
+        }
+        
+    });
+
+    DeletBtn.addEventListener("click", ()=>{
+        container.remove();
+    })
+
+    actionContainer.append(Favorite, Rate, DeletBtn);
+
+    container.append(MovieName, Director, rating , actionContainer);
+    movieHub.append(container);
+}
