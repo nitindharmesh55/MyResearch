@@ -93,3 +93,34 @@ product1.displayProduct();
 
 const total = product1.calculateTotal(salesTax);
 console.log(total);
+
+
+
+// Static: keyword that define properties or methods that belongs to a class itsel rather than obect created from the class;
+// Anything created with static keyword belong the class itself;
+
+
+class Mathuit{
+    static PI = 3.14;
+}
+
+console.log(Mathuit.PI);
+
+
+class User {
+    static userCount = 0;
+    constructor(username){
+        this.username = username;
+        User.userCount++;
+    }
+}
+const user1 = new User("SpongeBob");
+const user2 = new User("Naruto");
+const user3 = new User("Rimaru");
+
+console.log(User.userCount);
+
+
+// 5:29:00 
+
+
