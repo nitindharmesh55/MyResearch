@@ -53,3 +53,43 @@ console.log(car1.model);
 
 
 
+// Classes = ES6 features it provide a more structured and clear way to work with object;
+
+function Product(name,price){
+    this.name = name;
+    this.price  = price;
+    this.displayProduct  = function(){
+        console.log(`Product: ${this.name}`);
+        console.log(`price:${this.price.tofixed(2)}`);
+    }
+    this.calculateTotal = function(salesTax){
+        return this.price + (this.price * salesTax);
+    }
+}
+const salesTax = 0.5;
+
+
+
+// Creatting CLASS;
+
+class Products{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+    displayProduct(){
+        console.log(`product: ${this.name}`);
+        console.log(`Price: ${this.price}`);
+    }
+
+    calculateTotal(salesTax){
+        return this.price + (this.price *  salesTax);
+    }
+
+}
+
+const product1 = new Products("shirt", 19.99);
+product1.displayProduct();
+
+const total = product1.calculateTotal(salesTax);
+console.log(total);
