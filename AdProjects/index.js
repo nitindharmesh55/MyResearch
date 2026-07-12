@@ -231,7 +231,7 @@ const ATM = {
         else if (Number(amount) < 0) {
             throw new Error("Please Enter the Amount");
         }
-        else if( amount > this.balance){
+        else if (amount > this.balance) {
             throw new Error("Cheack your balance first bro");
         }
         this.balance -= amount;
@@ -245,19 +245,19 @@ const ATM = {
         return this.pin === pin;
     },
 
-    showTransactionHistory(){
+    showTransactionHistory() {
         console.log(this.transactionHistory);
-        
+
     },
 
-    changePin(oldpin, newPin){
+    changePin(oldpin, newPin) {
 
-        if(oldpin === this.pin){
+        if (oldpin === this.pin) {
             this.pin = newPin;
         }
-        else{
+        else {
             throw new Error("Plase put correct old pin");
-            
+
         }
     }
 }
@@ -266,7 +266,60 @@ ATM.withdraw(100);
 console.log(ATM.checkBalance());
 console.log(ATM.verifyPin("1234"));
 ATM.showTransactionHistory();
-ATM.changePin()
+ATM.changePin("1234", "2525")
 
 
 
+// 🟢 Project 6 — Shopping Cart
+
+const shoppingCart = {
+    items: [],
+
+    addProducts(name, price) {
+        this.items.push({ name, price })
+    },
+    showProducts() {
+        this.items.forEach((items, index) => {
+            console.log(`${index + 1}. ${items.name} - ${items.price}`);
+        })
+    },
+    removeProduct(productName){
+        const index = this.items.findIndex(item => item.name === productName);
+        if(index !== -1){
+            this.items.splice(index, 1);
+        }
+    },
+
+    calculateTotal(){
+     const total = this.items.reduce((acc, prev) =>{
+        return acc + prev.price;
+     }, 0)
+     console.log(total);
+     
+    },
+
+    countProducts(){
+    console.log(this.items.length);
+    
+    }
+    ,
+
+    clearCart(){
+        this.items = [];
+    }
+
+
+
+}
+
+shoppingCart.addProducts("Keyboard", 1000);
+shoppingCart.addProducts("PC", 25000);
+shoppingCart.addProducts("Mouse", 1200);
+shoppingCart.removeProduct("PC");
+shoppingCart.calculateTotal();
+shoppingCart.clearCart();
+shoppingCart.showProducts();
+
+
+
+// 🟢 Project 7 — Todo Manager
