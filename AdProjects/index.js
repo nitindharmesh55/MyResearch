@@ -283,28 +283,28 @@ const shoppingCart = {
             console.log(`${index + 1}. ${items.name} - ${items.price}`);
         })
     },
-    removeProduct(productName){
+    removeProduct(productName) {
         const index = this.items.findIndex(item => item.name === productName);
-        if(index !== -1){
+        if (index !== -1) {
             this.items.splice(index, 1);
         }
     },
 
-    calculateTotal(){
-     const total = this.items.reduce((acc, prev) =>{
-        return acc + prev.price;
-     }, 0)
-     console.log(total);
-     
+    calculateTotal() {
+        const total = this.items.reduce((acc, prev) => {
+            return acc + prev.price;
+        }, 0)
+        console.log(total);
+
     },
 
-    countProducts(){
-    console.log(this.items.length);
-    
+    countProducts() {
+        console.log(this.items.length);
+
     }
     ,
 
-    clearCart(){
+    clearCart() {
         this.items = [];
     }
 
@@ -323,3 +323,96 @@ shoppingCart.showProducts();
 
 
 // 🟢 Project 7 — Todo Manager
+
+const todoManager = {
+    tasks: [],
+
+    addTask(task, completed) {
+        this.tasks.push({ task, completed });
+    },
+    showTasks() {
+        this.tasks.forEach((task, index) => {
+            const flags = task.completed ? "✅" : "❌";
+            console.log(`${index + 1}. ${task.task} ${flags}`);
+
+
+        })
+    },
+    completTask(taskName){
+        const index =  this.tasks.findIndex(item => item.task === taskName);
+        if(index !== -1){
+            this.tasks[index].completed = true;
+        }
+        else {
+            console.log("Task not found");
+            
+        }
+    },
+
+    removeTask(taskName){
+        const index =  this.tasks.findIndex((item) => item.task === taskName);
+        if(index !== -1){
+            this.tasks.splice(index, 1);
+        }
+    },
+
+    countTask(){
+      let count = 0;
+       this.tasks.forEach(item =>{
+            if(item.completed){
+                count++;
+            
+            }
+
+        })
+        console.log(`Completed Task: ${count}`);
+        
+
+    },
+    showcomplete_penddingTask(){
+        console.log("Completed Tasks:");
+        
+        this.tasks.forEach(item =>{
+            if(item.completed){
+                console.log(item.task);
+            
+            }
+
+        })
+
+        console.log("Pending Tasks:");
+        this.tasks.forEach((item)=>{
+            if (!item.completed) {
+                console.log(item.task);
+                
+            }
+        })
+        
+
+    },
+    clearCompletedTask(){
+        [...this.tasks].forEach(item =>{
+            if (item.completed) {
+                const index  = this.tasks.indexOf(item);
+                this.tasks.splice(index, 1)
+                
+            }
+        })
+        
+    }
+
+
+}
+
+todoManager.addTask("Learn React", false);
+todoManager.addTask("Learn Mathematics", true)
+todoManager.addTask("Learn Node.js", true);
+todoManager.addTask("Learn PHP", false);
+todoManager.completTask("Learn PHP");
+todoManager.removeTask("Learn PHP");
+
+todoManager.showTasks();
+todoManager.showcomplete_penddingTask()
+todoManager.countTask();
+todoManager.clearCompletedTask()
+todoManager.showTasks();
