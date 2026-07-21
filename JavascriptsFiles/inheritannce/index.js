@@ -1,0 +1,1 @@
+// Inherritance: allows a new class to inherit properties and methods from the existing class
