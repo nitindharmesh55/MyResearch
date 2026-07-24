@@ -160,4 +160,55 @@ Atomic.borrowBook();
 
 
 
-// 🛒 Project 9 – Shopping Cart System
+// 🛒 Project 9 – Shopping Cart System;
+
+
+class Product{
+    constructor(name, price,stock){
+        this.name = name;
+        this.price = price;
+        this.stock =  stock;
+    }
+
+    showProduct(){
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: ${this.price}`);
+        console.log(`Stock: ${this.stock}`);
+        
+    }
+
+}
+
+class Shopping_Cart{
+    constructor(){
+        this.items = [];
+    }
+
+    addProduct(product){
+        this.items.push(product)
+        console.log(`${product.name} added to cart`);
+        
+    }
+
+    showCart(){
+        console.log("----- Shopping Cart-----");
+
+        this.items.forEach((product) =>{
+            console.log(`${product.name}`);
+            console.log(`₹${product.price}`);
+            
+            
+        })
+    }
+}
+
+
+const mouse = new Product("Mouse", 800, 20);
+const keyboard = new Product("Keyboard", 2500, 12);
+
+const cart = new Shopping_Cart();
+
+cart.addProduct(mouse);
+cart.addProduct(keyboard);
+
+cart.showCart();
