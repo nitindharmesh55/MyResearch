@@ -81,4 +81,5 @@ const student = new students("Nitin", "Mathematics");
 
 
 
-// 5.:46
+// 5.:46;
+
