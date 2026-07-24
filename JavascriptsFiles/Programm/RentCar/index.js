@@ -53,3 +53,59 @@ Toyota.showCar();
 const Honda = new Car("Honda", "Civic", 3000);
 const BMW = new Car("BMW", "M4", 8000);
 
+// 🟢 Project 7 – Gym Membership System (Classes)
+
+
+class GymMember{
+    constructor(name, membershipType){
+        this.name = name;
+        this.membershipType = membershipType;
+        this.isActive = true;
+    }
+    showDetails(){
+        console.log(`Name:${this.name}`);
+        console.log(`MemberShip:${this.membershipType}`);
+        let active = this.isActive ? "Active" : "Inactive";
+        console.log(`Status:${active}`);
+    }
+
+    cancelMembership(){
+        if(!this.isActive)
+        {
+         console.log("Membership is already inactive");
+         return;
+        }
+        else
+        {   
+            this.isActive = false;
+            console.log("Membership cancelled Successfully");
+            return;
+            
+        }
+    }
+
+
+    renewMembership(){
+        if(this.isActive)
+        {
+            console.log("Membership is already active");
+            return;
+        }
+        else{
+            this.isActive = true;
+            console.log("Membership renwed successfully");
+
+            return;
+            
+        }
+    }
+}
+
+const Employee = new GymMember("Nitin","Gold" );
+console.log(Employee);
+
+Employee.showDetails();
+Employee.cancelMembership();
+
+
+// 🚀 Next Project (Level Up)
