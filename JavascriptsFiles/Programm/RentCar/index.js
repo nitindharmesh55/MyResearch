@@ -263,3 +263,79 @@ classRoom.addStudent(Rahul);
 classRoom.addStudent(Priya);
 
 classRoom.showStudents();
+
+
+
+
+// 🎮 Project 11 – RPG Battle System
+
+// 🎯 Objective
+
+// Create two game characters that can fight each other.
+
+
+class Character{
+   
+    constructor(name, health, attackpower){
+        this.name = name;
+        this.health = health;
+        this.attackpower = attackpower;
+        this.isAlive = true;
+    }
+
+    showStatus(){
+        let alive = this.isAlive ? "Alive" : "Defeated";
+
+        console.log(`Name:${this.name}`);
+        console.log(`Health:${this.health}`);
+        console.log(`Attack:${this.attackpower}`);
+        console.log(`Status:${alive}`);
+    }
+   
+    attack(enemy){
+        if(!this.isAlive)
+        {
+            console.log(`${this.name} cannot attack because they defeated!`);
+            return;
+            
+        }
+        if(!enemy.isAlive)
+        {
+            console.log(`${enemy.isAlive} has been Defeated!`);
+            return;
+        }
+
+        enemy.health -= this.health;
+
+        console.log(`${this.name} attacked ${enemy.name} for ${this.attackpower} demage!`);
+
+
+        if(enemy.health <= 0)
+        {
+            enemy.health = 0;
+            enemy.isActive =  false;
+            console.log(`${enemy.name} has been defeated!`);
+            
+        }
+        
+
+    }
+
+
+
+}
+
+const knight = new Character("Kingsmen", 250, 1500);
+
+const Dragon  = new Character("Dragon", 60, 25);
+
+// knight.attack(Dragon);
+
+Dragon.attack(knight);
+Dragon.attack(knight);
+Dragon.attack(knight);
+Dragon.attack(knight);
+Dragon.attack(knight);
+Dragon.attack(knight);
+Dragon.attack(knight);
+Dragon.attack(knight);
