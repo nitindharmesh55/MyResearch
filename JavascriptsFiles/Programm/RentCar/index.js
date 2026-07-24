@@ -109,3 +109,55 @@ Employee.cancelMembership();
 
 
 // 🚀 Next Project (Level Up)
+
+
+
+class Book{
+    constructor(title, author, pages){
+       
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isBorrowed = false;
+    }
+
+    borrowBook(){
+        if(this.isBorrowed)
+        {
+            console.log(`${this.title} is already borrowed.`);
+            return;
+        }
+        this.isBorrowed = true;
+
+        console.log(`${this.title} borrowed successfully`);
+    }
+
+    returnBook(){
+        if(!this.isBorrowed)
+        {
+            console.log("This book Wasn't borrowed.");
+            return;
+        }
+        this.isBorrowed =  false;
+        console.log(`${this.title} return sucessfully`);
+        
+    }
+
+
+    showBook(){
+        let active = this.isBorrowed ? "Borrowed": "Available";
+
+        console.log(`Title: ${this.title}`);
+        console.log(`Author: ${this.author}`);
+        console.log(`Pages: ${this.pages}`);
+        console.log(`Status: ${active}`);
+    }
+}
+
+const Atomic = new Book("Atomic Habits", "James", 300);
+
+Atomic.borrowBook();
+
+
+
+// 🛒 Project 9 – Shopping Cart System
