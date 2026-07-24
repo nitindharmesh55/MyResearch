@@ -212,3 +212,54 @@ cart.addProduct(mouse);
 cart.addProduct(keyboard);
 
 cart.showCart();
+
+
+
+// 🎓 Project 10 – Student Management System
+
+class Student{
+    constructor(name, age, course){
+        this.name = name;
+        this.age = age;
+        this.course = course;
+    }
+
+    showStudent(){
+        console.log(`Name: ${this.name}`);
+        console.log(`Age: ${this.age}`);
+        console.log(`Course: ${this.course}`);
+    }
+}
+
+class classroom{
+    constructor(){
+        this.students = [];
+    }
+
+    addStudent(student){
+        this.students.push(student);
+        console.log(`${student.name} added successfully`);
+    }
+
+    showStudents(){
+        this.students.forEach((classStudent)=>{
+            console.log("-----------------");
+            classStudent.showStudent();
+            
+        })
+    }
+}
+
+
+const Nitin = new Student("Nitin", 23, "BCA");
+const Rahul = new Student("Rahul", 20, "Bcom");
+const Priya = new Student("Priya", 22, "Bsc");
+
+const classRoom =  new classroom();
+
+
+classRoom.addStudent(Nitin);
+classRoom.addStudent(Rahul);
+classRoom.addStudent(Priya);
+
+classRoom.showStudents();
