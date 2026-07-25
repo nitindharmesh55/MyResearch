@@ -95,3 +95,90 @@ movieBooks.showMovie();
 
 
 // 🐶 Project 13 – Pet Adoption Center
+
+
+class Pet{
+    constructor(name, type, age)
+    {
+        this.name = name;
+        this.type = type;
+        this.age = age;
+        this.isAdopted =  false;
+    }
+
+    adopt(){
+        if(this.isAdopted)
+        {
+            console.log("Buddy is already adopted!");
+            return;
+        }
+        this.isAdopted = true;
+        console.log("Buddy has been adopted.");
+    }
+
+    showPet(){
+        let status =  this.isAdopted ? "Available" : "Adopted";
+        console.log(`Name: ${this.name}`);
+        console.log(`Type: ${this.type}`);
+        console.log(`Name: ${this.age}`);
+        console.log(`Status: ${status}`);   
+    }
+}
+
+
+class AdoptionCenter{
+    constructor(){
+        this.Pets = [];
+    }
+    addPet(pet)
+    {
+        this.Pets.push(pet);
+        console.log(`${pet.name} added successfully`);
+        
+        
+
+    }
+    showPets()
+    {
+        this.Pets.forEach((pet) =>{
+            pet.showPet();
+        })
+    }
+
+    adopetPet(name)
+    {
+        let found =  false;
+        this.Pets.forEach((pet)=>{
+            if(pet.name === name)
+            {
+                pet.adopt();
+                found = true;
+            }
+        });
+
+        if(!found)
+        {
+            console.log("Pet not found!!");
+            
+        }
+    }
+
+}
+
+
+const Buddy =  new Pet("Buddy", "Dog", 2);
+const Milo =  new Pet("Milo", "Cat", 1);
+const Rocky =  new Pet("Rocky", "Dog", 4);
+
+const petcenter = new AdoptionCenter();
+
+
+petcenter.addPet(Buddy);
+petcenter.addPet(Milo);
+petcenter.addPet(Rocky);
+
+petcenter.showPets();
+petcenter.addPet(Buddy);
+
+petcenter.adopetPet("Buddy");
+
