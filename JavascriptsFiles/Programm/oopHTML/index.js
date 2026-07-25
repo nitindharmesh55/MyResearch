@@ -106,3 +106,113 @@ addPet.addEventListener("click", ()=>{
 
    
 })
+
+
+
+// movieAPPls
+
+const movieApp = document.getElementById("movieApp");
+
+const movieContainer =  document.createElement("div");
+
+movieContainer.classList.add("movieContainer");
+
+movieApp.append(movieContainer);
+
+const title =  document.createElement("h1");
+title.textContent = "Movie Collection Manager";
+
+const movieName = document.createElement("input");
+
+movieName.type =  "text";
+movieName.placeholder =  "Enter Movie Name";
+const movieRating =  document.createElement("input");
+
+movieRating.type = "number";
+movieRating.placeholder = "Enter Rating(1 - 10)";
+
+const select = document.createElement("select");
+
+const genres = ["Action", "Comedy", "Horror", "Drama"];
+
+genres.forEach((genre) =>{
+    const option  = document.createElement("option");
+
+    option.textContent =  genre;
+    option.value = genre;
+
+    select.append(option);
+})
+
+const addMovie =  document.createElement("button");
+
+addMovie.textContent  = "Add Movie";
+
+
+const movieList =  document.createElement("div");
+
+movieList.classList.add("movie-list");
+movieContainer.append(title, movieName, movieRating, select, addMovie, movieList);
+
+
+class Movie {
+    constructor(name, rating, genre) {
+        this.name =  name;
+        this.rating  = rating;
+        this.genre  = genre;
+    }
+}
+
+class MovieCollection{
+    constructor(){
+        this.movies = [];
+    }
+
+    addMovie(movie)
+    {
+        this.movies.push(movie);
+    }
+}
+
+const MovieCollectionprime =  new MovieCollection();
+
+
+ addMovie.addEventListener("click", ()=>{
+
+    const name =  movieName.value;
+    const rating =  movieRating.value;
+    const genre =  select.value;
+
+    const movie = new Movie(name, rating, genre);
+
+    MovieCollectionprime.addMovie(movie);
+    const card = document.createElement("div");
+    card.classList.add("card");
+
+    const h2 =  document.createElement("h2");
+    h2.textContent  = movie.name;
+
+    const ratingP =  document.createElement("p");
+
+    ratingP.textContent =  `Rating: ${movie.rating}`;
+
+    const Genre  = document.createElement("p");
+
+    Genre.textContent  = `Genre: ${movie.genre}`;
+   
+    const deleteBtn =  document.createElement("button");
+    deleteBtn.textContent = "Delete";
+
+  
+    
+    card.append(h2, ratingP, Genre, deleteBtn);
+      deleteBtn.addEventListener("click", ()=>{
+        card.remove();
+    })
+
+    movieList.append(card);
+
+    
+
+
+ })
