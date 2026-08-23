@@ -128,3 +128,64 @@ console.log(User.userCount);
 // 5:29:00 
 
 
+// Static: define properties or method that belongs to a class itself; class own anything which is static;
+
+
+class MathUNI{
+    static PI = 3.14;
+    static getDiameter(radius){
+        return radius * 2;
+    }
+    static getCircumference(radius){
+        return 2 * this.PI * radius;
+    }
+    static getArea(radius){
+        return this.PI * Math.pow(radius, 2);
+    }
+}
+
+console.log(MathUNI.PI);
+
+console.log(MathUNI.getDiameter(10));
+
+console.log(MathUNI.getCircumference(10));
+
+console.log(MathUNI.getArea(20));
+
+
+class UserCountTap{
+    static userCount = 0;
+    constructor(userName){
+        this.userName = userName;
+         UserCountTap.userCount++;
+    }
+    sayhello(){
+        console.log(`Hello, my UserName is ${this.userName}`);
+        
+    }
+
+    static getUserCount(){
+        console.log(`There are ${UserCountTap.userCount} User Online `);
+        
+    }
+}
+
+
+// Creating user objects;
+
+const user11 = new UserCountTap("SpongBob");
+const user12 = new UserCountTap("Patrick");
+const user13 = new UserCountTap("Squidward");
+
+user11.sayhello()
+user12.sayhello()
+user13.sayhello()
+
+console.log(UserCountTap.userCount);
+UserCountTap.getUserCount();
+
+
+
+
+
+
