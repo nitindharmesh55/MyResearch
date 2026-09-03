@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.977);
+}
+h1{
+    font-size: 45px;
+    color: rgba(70, 122, 234, 0.796);
+}
+.container{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.info{
+    display: flex;
+    align-items: center;
+
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #767575;
+    border-radius: 5px;
+
+}
+button{
+    padding: 10px 28px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background: rgba(70, 122, 234, 0.996);
+    border-radius: 5px;
+}
+button:hover{
+    background-color:rgba(70, 122, 234, 0.596) ;
+}
+
+/* Account Container */
+#output{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    margin-top: 24px;
+}
+.accountContainer{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(70, 122, 234, 0.996);
+    padding: 24px;
+    min-width:450px;
+    border-radius: 10px;
+ /* max-width: 900px; */
+ /* margin: auto; */
+}
+.accountContainer p{
+    color: rgba(65, 65, 66, 0.796);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.depositContainer{
+    display: flex;
+    align-items: center;
+}
