@@ -61,59 +61,5 @@ hawk.fly();
 // Super - this parent;
 
 
-class Cars {
-    constructor(name, speed){
-        this.name = name;
-        this.speed = speed;
-
-    }
-    move(speed){
-        console.log(`This ${this.name} speed of ${speed}km/h`);
-        
-    }
-}
-
-
-class BMW extends Cars {
-    constructor(name, speed, engine){ 
-        super(name, speed);
-        this.engine = engine;
-    }
-
-    run(){
-        console.log("It can Runn");;
-        super.move(this.engine)
-        
-    }
-   
-}
-
-class Lembo extends Cars{
-     constructor(name, speed, engine){
-        super(name, speed);
-        this.engine = engine;
-    }
-    
-}
-
-class Cooper extends Cars{
-     constructor(name, speed, engine){
-        super(name, speed);
-        this.engine = engine;
-    }
-
-}
-
-const V2 =  new BMW("V2", 25, 255);
-const V3 =  new Lembo("B2", 25, "Inline");
-
-console.log(V2.name);
-console.log(V2.speed);
-console.log(V2.engine);
-
-V2.run();
-
-
-// 5:48:00 super Keyword;
 
 
