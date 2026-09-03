@@ -51,3 +51,48 @@ let result = expensiveExpense.map((expense) => {
 console.log(result[0].amount);
 
 
+
+
+// 🟢 Project 2: Student Grade Manager
+
+
+class Students {
+    constructor(name, age, marks) {
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
+    }
+
+    average(){
+        let Average =  this.marks.reduce((acc, curr)=> acc + curr, 0) / this.marks.length;
+        document.write("<br>");
+        document.write(`${this.name}: Average Marks: ${Average.toFixed(3)}`);
+        return Average;
+    }
+    grade(){
+        let Grade = this.average();
+        if(Grade >= 90){
+            document.write("<br/>");
+            document.write(`${this.name}: Grade: A`);
+        }
+        else if(Grade >= 80){
+            document.write("<br/>");
+            document.write(`${this.name}: Grade: B`);
+        }
+          else if(Grade >= 70){
+            document.write("<br/>");
+            document.write(`${this.name}: Grade: C`);
+        }
+          else if(Grade >= 60){
+            document.write("<br/>");
+            document.write(`${this.name}: Grade: D`);
+        }
+        else{
+            document.write("<br/>");
+            document.write(`${this.name}: Grade: F`);
+        }
+    }
+}
+let  student1 = new Students("Nitin", 20, [90,80,95]);
+student1.average();
+student1.grade();
