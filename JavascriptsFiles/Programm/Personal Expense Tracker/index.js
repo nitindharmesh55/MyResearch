@@ -96,3 +96,91 @@ class Students {
 let  student1 = new Students("Nitin", 20, [90,80,95]);
 student1.average();
 student1.grade();
+
+
+// 🟢 Project 3: Simple Bank Account
+
+class BankAccount {
+    constructor(name, balance) {
+        this.name = name;
+        this.balance = balance;
+    }
+    deposit(amount){
+      let deposit =  this.balance += amount;
+      return deposit;
+    }
+    withdraw(amount){
+        let withdraw;
+        if(this.balance >=  amount)
+        {
+            withdraw = this.balance -= amount;
+        }
+        else{
+            document.write("Insufficient Balance");
+        }
+        return withdraw;
+    }
+    display(){
+        document.write("<br>")
+        document.write(`Account Holder: ${this.name}`);
+        document.write("<br>")
+        document.write(`Balance:  ${this.balance}` );
+    }
+}
+
+let account1 = new BankAccount("Nitin", 5000);
+let account2 = new BankAccount("Mike", 2000);
+let account3 = new BankAccount("Rimaru", 5000);
+let accounts = [account1, account2, account3];
+accounts.forEach((account) =>{
+    // What method does an account;
+    account.display();
+})
+
+let accountName = accounts.map((account) =>{
+    return account.name;
+})
+console.log(accountName);
+
+let richAccounts =  accounts.filter((account) =>{
+    return  account.balance >= 4000;
+})
+console.log(richAccounts);
+
+
+let richResult = richAccounts.map((account) =>{
+    return account.name;
+})
+console.log(richResult);
+
+
+
+
+
+account1.deposit(1000);
+document.write("<br>")
+document.write(account1.balance);
+
+account1.display();
+account2.display();
+account3.display();
+
+
+class SavingAccount extends BankAccount {
+    constructor(name, balance, interestRate) {
+        super(name, balance);
+        this.interestRate = interestRate;
+    }
+    addInterest(){
+        let interest = this.balance * ( this.interestRate / 100);
+
+        this.balance += interest;
+
+        return interest;
+    }
+}
+let savings1 = new SavingAccount("Nitin", 5000, 5);
+savings1.deposit(10000);
+savings1.addInterest();
+savings1.withdraw(750);
+savings1.display();
