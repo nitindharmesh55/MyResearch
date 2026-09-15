@@ -1,0 +1,20 @@
+.card::before{
+    content: "Before";
+    width: 100%;
+    background: #000;
+    height: 100%;
+    position: absolute;
+    inset: -10px;
+    
+    padding: 9px;
+        
+    z-index: -1;
+}
+.card{
+    width: 200px;
+    min-height: 200px;
+    padding: 12px;
+    background-color: red;
+    position: relative;
+    /* z-index: 1; */
+}
