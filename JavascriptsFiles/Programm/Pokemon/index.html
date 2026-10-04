@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Pokémon Battle Simulator</h1>
+
+    <form>
+        <div class="inputcontainer">
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" placeholder="Enter Name" required>
+        </div>
+        <div class="inputcontainer">
+            <label for="Hp">HP:</label>
+            <input type="number" id="Hp" placeholder="Enter HP" required>
+        </div>
+        <div class="inputcontainer">
+            <label for="ATC">Attack</label>
+            <input type="number" id="ATC" placeholder="Enter Attack" required>
+        </div>
+        <div class="inputcontainer">
+            <label for="type">Type:</label>
+            <select name="type" id="type">
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <option value="grass">Grass</option>
+                <option value="electric">Electric</option>
+            </select>
+        </div>
+         <input type="submit"  value="Create Pokemon" id="submit">
+    </form>
+    <div id="pokemonDisplay"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

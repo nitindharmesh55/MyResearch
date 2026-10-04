@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 50, 25);
+    color: white;
+}
+form{
+    padding: 28px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+  background-color: rgb(39, 39, 84);    
+}
+.inputcontainer{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+#submit{
+    align-self: flex-start;
+    margin-left: 20px;
+    padding: 12px 24px;
+}
+input, select{
+    padding: 12px 28px;
+}
