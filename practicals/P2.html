@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>roll No</th>
+            <th>City</th>
+        </tr>
+<script>
+    let obj = {"student":[
+        {"Name": "Nitin", "RollNo": 18, "City": "Palanpur"},
+         {"Name": "Nirmal", "RollNo": 19, "City": "Palanpur"} ,
+         {"Name": "Shubham", "RollNo": 5, "City": "Palanpur"}
+    ]}
+   
+    for(let i = 0; i < obj.student.length; i++)
+{
+    document.write("<tr> <td> " + obj.student[i].Name + "</td> <td>" + obj.student[i].RollNo + "</td><td>"+ obj.student[i].City + "</td> </tr>")
+}
+
+</script>
+</table>
+
+</body>
+</html>
