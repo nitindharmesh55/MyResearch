@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asking Objects</title>
+</head>
+<body>
+  <table id="tab" border="1">
+    <tr>
+        <th>Name</th>
+        <th>Roll No</th>
+        <th>city</th>
+    </tr>
+  </table>
+    <script>
+        let NumberOfStudent =  Number(prompt("Enter Number of Student: "));
+        let students =  [];
+        let table =  document.getElementById("tab");
+
+        for(let i = 0;  i  < NumberOfStudent; i++)
+    {
+         let Name =  prompt("Enter  your name: ");
+         let RollNo =  Number(prompt("Enter Roll No: "));
+         let City  =  prompt("Enter your City");
+         let student =  { Name: Name, RollNo: RollNo, City:City};
+         students.push(student)
+    }
+
+    students.forEach((student) =>{
+      table.innerHTML += ` <tr> <td> ${student.Name} </td> <td>${student.RollNo} </td>  <td>${student.City}</td> </tr>`;
+    })
+
+
+
+    </script>
+</body>
+</html>
